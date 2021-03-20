@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springmvc</artifactId>
+        <groupId>com.dreamplume.springmvc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>Springmvc_04</artifactId>
+
+
+    <dependencies>
+        <!--使用工具类用域解析 json 对象-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.1</version>
+        </dependency>
+
+        <!--
+            @Data: 使用这个注解，就不用再去手写Getter,Setter,equals,canEqual,hasCode,toString
+                   等方法了，注解后在编译时会自动加进去。
+
+            @AllArgsConstructor: 使用后添加一个构造函数，该构造函数含有所有已声明字段属性参数
+
+            @NoArgsConstructor: 使用后创建一个无参构造函数
+
+            @Builder: 关于Builder较为复杂一些，Builder的作用之一是为了解决在某个类有很多构造函
+                      数的情况，也省去写很多构造函数的麻烦，在设计模式中的思想是：用一个内部类去
+                      实例化一个对象，避免一个类出现过多构造函数，
+
+             注意，此处虽然我引用了 lombok，但是在实际的代码中任然无效
+             我在 IDEA　中安装了　lombok 的插件
+        -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+
+        <!-- fastjson.jar 阿里云创建用于将 json 和 javaBean 对象的转换 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.60</version>
+        </dependency>
+    </dependencies>
+
+</project>

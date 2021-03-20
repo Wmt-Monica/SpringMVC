@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsonTest</title>
+</head>
+<script>
+    var user = {
+        name : "石燔",
+        age : 22
+    };
+    console.log(user);
+
+    // 实现将 js 对象转变成 Json 对象:使用 JSON.stringify() 方法
+    var json = JSON.stringify(user);
+    console.log(json);  // {"name":"石燔","age":22}
+
+    // 实现将 json 对象转变成 js 对象，使用 JSON.parse() 方法
+    var js = JSON.parse(json);
+    console.log(js);  // object = {age : 22, name : "石燔"}
+</script>
+<body>
+
+</body>
+</html>
